@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>View change</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        const appDiv = document.getElementById("app");
+        //displayProduct("Piano");
+
+        function homePage() {
+            appDiv.innerHTML = ""; // Remove content in div
+
+            const list = document.createElement("ul");
+
+            const carItem = document.createElement("li");
+            const carLink = document.createElement("a");
+            carLink.innerText = "Car";
+            carItem.appendChild(carLink);
+            list.appendChild(carItem);
+
+            const pianoItem = document.createElement("li");
+            const pianoLink = document.createElement("a");
+            pianoLink.innerText = "Piano";
+            pianoItem.appendChild(pianoLink);
+            list.appendChild(pianoItem);
+
+            appDiv.appendChild(list);
+            
+        }
+
+        function displayProduct(name) {
+            appDiv.innerHTML = ""; // Remove content in div
+            
+            const title = document.createElement("h1");
+            title.innerText = name;
+            appDiv.appendChild(title);
+
+            const homePageLink = document.createElement("a");
+            homePageLink.innerText = "Go back to home page";
+            appDiv.appendChild(homePageLink);
+           
+        }
+        const pianoButton = document.createElement("button")
+            pianoButton.innerHTML = "Display-product";
+            appDiv.appendChild(pianoButton);      
+            pianoButton.addEventListener("click", () => {
+	displayProduct("Piano");
+})
+
+const homePageButton = document.createElement("button")
+            homePageButton.innerHTML = "Home-page";
+            appDiv.appendChild(homePageButton);
+            homePageButton.addEventListener("click", () =>  {
+	homePage();
+})
+
+    </script>
+    
+</body>
+</html>
