@@ -12,7 +12,7 @@
 
     <script>
         const appDiv = document.getElementById("app");
-        //displayProduct("Piano");
+       homePage();
 
         function homePage() {
             appDiv.innerHTML = ""; // Remove content in div
@@ -22,13 +22,23 @@
             const carItem = document.createElement("li");
             const carLink = document.createElement("a");
             carLink.innerText = "Car";
+            carLink.href = "#";
+            carLink.addEventListener("click", (e) => {
+                e.preventDefault();
+	displayProduct("car");
+})
             carItem.appendChild(carLink);
             list.appendChild(carItem);
 
             const pianoItem = document.createElement("li");
             const pianoLink = document.createElement("a");
             pianoLink.innerText = "Piano";
+            pianoLink.href = "#";
             pianoItem.appendChild(pianoLink);
+            pianoLink.addEventListener("click", (e) => {
+                e.preventDefault();
+	displayProduct("Piano");
+})
             list.appendChild(pianoItem);
 
             appDiv.appendChild(list);
@@ -44,24 +54,21 @@
 
             const homePageLink = document.createElement("a");
             homePageLink.innerText = "Go back to home page";
-            homePageLink.href = "#";
+
             appDiv.appendChild(homePageLink);
+            homePageLink.title = "Go back to home page";
+           homePageLink.href = "#";
+           homePageLink.addEventListener("click", (e) => {
+               e.preventDefault();
+               homePage();
+           })
+           appDiv.appendChild(homePageLink);
            
         }
-        const pianoButton = document.createElement("button")
-            pianoButton.innerHTML = "Display-product";
-            appDiv.appendChild(pianoButton);      
-            pianoButton.addEventListener("click", () => {
-	displayProduct("Piano");
-})
+          
 
-const homePageButton = document.createElement("button")
-            homePageButton.innerHTML = "Home-page";
-            appDiv.appendChild(homePageButton);
-            homePageButton.addEventListener("click", () =>  {
-	homePage();
-})
 
     </script>
+    
 </body>
 </html>
