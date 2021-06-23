@@ -161,10 +161,24 @@ select {
     background-color: #dee1e4;
     background-repeat: no-repeat;
     background-position: right .75rem center;
+    background-image: url(../degree-converter/assets/caret-down-fill.svg);
     border: 1px solid #ced4da;
     border-radius: .25rem;
     appearance: none;
     
+}
+
+.equal-sign {
+    display: inline-block;
+    line-height: 50px;
+    width: 40px;
+    text-align: center;
+    font-size: 36px;
+    color: #6c6d6e;
+    padding-top: 10px;
+    vertical-align: top;
+    margin-left: -4px;
+    margin-right: -4px;
 }
 
   
