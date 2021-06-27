@@ -21,18 +21,18 @@
       selectedInputValue  = selectedInput.value;
       selectedOutputValue = selectedOutput.value;
      if (selectedInputValue === "celsius" && selectedOutputValue === "fahrenheit") {
-       selectedOutputValue = Number(selectedInput.value*1.8) + 32;
+       output.value = Number(input.value*1.8) + 32;
      }
-     else if (selectedInputValue === "celsius" && selectedOutputValue === "kelvin") {
-      selectedOutputValue = Number(selectedInput.value + 273.15);
+     else if (selectedInputValue === "celsius" && selectedOutputValue === "Kelvin") {
+      output.value = Number(input.value + 273.15);
     }
     else if (selectedInputValue === "celsius" && selectedOutputValue === "celsius") {
-      selectedOutputValue = selectedInput.value;
+      output.value = input.value;
     }
     if (selectedInputValue === "fahrenheit" && selectedOutputValue === "celsius") {
-      selectedOutputValue = (input.value*1.8) + 32;
+      output.value = (input.value*1.8) + 32;
     }
-    else if (selectedInputValue === "fahrenheit" && selectedOutputValue === "kelvin") {
+    else if (selectedInputValue === "fahrenheit" && selectedOutputValue === "Kelvin") {
      selectedOutputValue = input.value + 273.15;
    }
    else if (selectedInputValue === "fahrenheit" && selectedOutputValue === "fahrenheit") {
