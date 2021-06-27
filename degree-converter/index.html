@@ -22,28 +22,29 @@
         </div>-->
             <div class="row">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Value in Celsius">
+                  <input type="text" id="input" class="input" placeholder="Value in Celsius">
                 
-                  <select class="form-select" aria-label="Default select example">
-                    <option value="1">Celsius</option>
-                    <option value="2">Fahrenheit</option>
-                    <option value="3">Kelvin</option>
+                  <select id="selectedInput" class="form-select">
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
                   </select>
                 </div>
                 <div class="equal-sign">=</div>
                
                 
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Value in Fahrenheit">
-                  <select class="form-select" aria-label="Default select example">
-                    <option value="1">Fahrenheit</option>
-                    <option value="2">Celsius</option>
-                    <option value="3">Kelvin</option>
+                  <input type="text" id="output" class="input" placeholder="Value in Fahrenheit">
+                  <select id="selectedOutput" class="form-select">
+                    <option value="celsius">Celsius</option>
+                    <option value="fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
                   </select>
                 </div>
               </div>
          
       </div>
+      <script type="text/javascript" src="app.js"></script>
     
 </body>
 </html>
