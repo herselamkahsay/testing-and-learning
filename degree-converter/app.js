@@ -30,14 +30,23 @@
       output.value = input.value;
     }
     if (selectedInputValue === "fahrenheit" && selectedOutputValue === "celsius") {
-      output.value = (input.value*1.8) + 32;
+      output.value = (input.value -32)/1.8;
     }
     else if (selectedInputValue === "fahrenheit" && selectedOutputValue === "Kelvin") {
-     selectedOutputValue = input.value + 273.15;
+     output.value = (input.value -32)/1.8 + 273.15;
    }
    else if (selectedInputValue === "fahrenheit" && selectedOutputValue === "fahrenheit") {
-     selectedOutputValue = input.value;
+     output.value = input.value;
    }
+   if (selectedInputValue === "Kelvin" && selectedOutputValue === "celsius") {
+    output.value = (input.value -32)/1.8;
+  }
+  else if (selectedInputValue === "Kelvin" && selectedOutputValue === "fahrenheit") {
+   output.value = (input.value -32)/1.8 + 273.15;
+ }
+ else if (selectedInputValue === "Kelvin" && selectedOutputValue === "Kelvin") {
+   output.value = input.value;
+ }
     }
  
 
