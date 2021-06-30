@@ -21,31 +21,31 @@ function myResult() {
   selectedInputValue = selectedInput.value;
   selectedOutputValue = selectedOutput.value;
   if (selectedInputValue === "celsius" && selectedOutputValue === "fahrenheit") {
-    output.value = Number(input.value * 1.8) + 32;
+    output.value = (Number(input.value) * 1.8) + 32;
   }
   else if (selectedInputValue === "celsius" && selectedOutputValue === "Kelvin") {
-    output.value = Number(input.value + 273.15);
+    output.value = Number(input.value) + 273.15;
   }
   else if (selectedInputValue === "celsius" && selectedOutputValue === "celsius") {
-    output.value = input.value;
+    output.value = Number(input.value);
   }
   if (selectedInputValue === "fahrenheit" && selectedOutputValue === "celsius") {
-    output.value = (input.value - 32) / 1.8;
+    output.value = (Number(input.value) - 32) / 1.8;
   }
   else if (selectedInputValue === "fahrenheit" && selectedOutputValue === "Kelvin") {
-    output.value = (input.value - 32) / 1.8 + 273.15;
+    output.value = (Number(input.value) - 32) / 1.8 + 273.15;
   }
   else if (selectedInputValue === "fahrenheit" && selectedOutputValue === "fahrenheit") {
-    output.value = input.value;
+    output.value = Number(input.value);
   }
   if (selectedInputValue === "Kelvin" && selectedOutputValue === "celsius") {
-    output.value = (input.value - 32) / 1.8;
+    output.value = (Number(input.value) - 32) / 1.8;
   }
   else if (selectedInputValue === "Kelvin" && selectedOutputValue === "fahrenheit") {
-    output.value = (input.value - 32) / 1.8 + 273.15;
+    output.value = (Number(input.value) - 32) / 1.8 + 273.15;
   }
   else if (selectedInputValue === "Kelvin" && selectedOutputValue === "Kelvin") {
-    output.value = input.value;
+    output.value = Number(input.value);
   }
 }
 
