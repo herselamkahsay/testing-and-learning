@@ -1,17 +1,4 @@
-
-function opentextarea() {
-
-    var input = document.createElement('textarea');
-    input.name = 'post';
-    input.maxLength = 5000;
-    input.cols = 60;
-    input.rows = 30;
-    input.className = 'customTextarea';
-    var button = document.createElement('button');
-    var noteBody = document.getElementById('body');
-    while (noteBody.childNodes.length > 0) {
-        noteBody.removeChild(noteBody.childNodes[0]);
-    }
-    noteBody.appendChild(input);
-    noteBody.appendChild(button);
-}
+var container2 = document.getElementsByClassName("container2")[0];
+var container3 = document.getElementsByClassName("container3")[0];
+var addIcon = document.getElementsByName("add-icon");
+var xIcon = document.getElementsByName("x-icon");
