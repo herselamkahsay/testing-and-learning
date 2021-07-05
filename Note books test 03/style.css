@@ -13,10 +13,10 @@ body {
    
 
 }
-.col-1{
+.container1{
     margin-left: 10%;
 }
-.col-2{
+.container2{
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
@@ -24,7 +24,7 @@ body {
     margin-left: 10%;
 
 }
-.col-3{
+.container3{
     position: absolute;
     top: 20%;
     left: 35%;
@@ -62,10 +62,10 @@ svg{
         margin: auto;
         /*background-color: gray;*/
     }
-    .col-2{
+    .container2{
         display:inline-block ;
     }
-    .col-3{
+    .container3{
         position: absolute;
         top: 20%;
         left: 45%;
@@ -95,10 +95,10 @@ svg{
 }
 @media screen and (max-width:768px) and (min-width:480px) {
   
-    .col-2{
+    .container2{
         display:inline-block ;
     }
-    .col-3{
+    .container3{
         position: absolute;
         top: 35%;
         left: 35%;
@@ -128,10 +128,10 @@ svg{
 }
 @media screen and (max-width:480px) {
   
-    .col-2{
+    .container2{
         display:block ;
     }
-    .col-3{
+    .container3{
         position: absolute;
         top: 30%;
         left: 45%;
