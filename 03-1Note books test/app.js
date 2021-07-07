@@ -18,6 +18,14 @@ xIcon.addEventListener("click", function () {
 
 //call the two function
 function makeNote() {
+    var noteText = document.getElementById("note-text").value;
+    var node0 = document.createElement("div");
+
+    var node1 = document.createElement("h1");
+
+    node1.innerHTML = noteText;
+    node0.appendChild(node1);
+    container2.insertAdjacentElement("beforeend", node0);
 
 }
 function openNewNote() {
