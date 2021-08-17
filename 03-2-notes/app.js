@@ -6,8 +6,9 @@ const notes = [
 //console.log(notes[i].title);
 
 var noteList = document.getElementById("note-list");
-showNotesList();
-function showNotesList() {
+console.log(noteList)
+//showNotesList();
+noteList.addEventListener('click', function showNotesList() {
     // Create the list element:
     noteList.innerHTML = "";
     var list = document.createElement('ul');
@@ -21,37 +22,48 @@ function showNotesList() {
 
         // Add it to the list:
         list.appendChild(note);
+
     }
     noteList.appendChild(list);
 
-}
+
+})
+var singleNote = document.getElementById("single-note");
+//console.log(singleNote);
 
 
 
-/*let noteList = [];
-function showNotesList() {
-    // Create the list element:
-    var list = document.createElement('ul');
+var textArea = document.getElementById("note-text").value
 
-    for (var i = 0; i < noteList.length; i++) {
-        // Create the list item:
-        var item = document.createElement('li');
 
-        // Set its contents:
-        item.appendChild(document.createTextNode(noteList[i]));
+function showSingleNote(id) {
+    var titles = document.getElementById("input-title").value;
 
-        // Add it to the list:
-        list.appendChild(item);
+    for (var i = 0; i < titles.length; i++) {
+        notes.title = titles[i].value;
+        console.log(titles);
+
     }
+    var contents = document.getElementById("note-text").value;
 
-    // Finally, return the constructed list:
-    return list;
+    for (var i = 0; i < contents.length; i++) {
+        notes.content = contents[i].value;
+        console.log(contents);
+
+    }
+    /* var newNote = document.getElementsByClassName("newNote");
+ 
+     if (newNote.style.display == "none") {
+         newNote.style.display = "block";
+     }
+     else {
+         newNote.style.display = "none";
+     }*/
+
+
 }
-noteList = document.getElementById("note-list");
-//document.getElementById("note-list").appendChild(showNotesList(notes[1]));
-//const noteList = notes.map(showNotesList);
-//let noteList = [];
-//noteList = document.getElementById("note-list");
+showSingleNote();
 
+function openNewNote() {
 
-*/
+}
