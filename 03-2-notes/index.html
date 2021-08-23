@@ -15,7 +15,8 @@
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     </head>
     <body>
-        <div id="note-list"></div>
+        <div id="note-list">
+        </div>
         <!--<input type="text" id="input" placeholder="title">
         <button type="button" class="btn btn-success">new note<svg id="add-icon"
                 xmlns="http://www.w3.org/2000/svg"
@@ -38,16 +39,16 @@
             <input type="text" placeholder="title">
             <textarea name="" id="" cols="30" rows="10"></textarea>
         </div>-->
-        <div id="single-note" class="newNote">
+        <div id="singleNote" class="newNote" style="display: none;">
             <input type="text" id="input-title" onclick="showSingleNote()"
                 placeholder="title">
-            <textarea name="post" id="note-text"
+            <textarea name="post" id="note-text" onclick="showSingleNote()"
                 placeholder="writetext"
                 maxlength="5000">
             </textarea>
-            <button type="button" class="btn
-                btn-success">save
-                <svg id="add-icon"
+            <button type="button" id="add-icon" class="btn
+                btn-success">show All
+                <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16" height="16"
                     fill="currentColor" class="bi

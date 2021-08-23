@@ -6,9 +6,9 @@ const notes = [
 //console.log(notes[i].title);
 
 var noteList = document.getElementById("note-list");
-console.log(noteList)
+//console.log(noteList)
 //showNotesList();
-noteList.addEventListener('click', function showNotesList() {
+function showNotesList() {
     // Create the list element:
     noteList.innerHTML = "";
     var list = document.createElement('ul');
@@ -16,34 +16,50 @@ noteList.addEventListener('click', function showNotesList() {
     for (var i = 0; i < notes.length; i++) {
 
         var note = document.createElement('li');
-
         // Set its contents
         note.appendChild(document.createTextNode(notes[i].title));
 
         // Add it to the list:
         list.appendChild(note);
+        // Add class name
+        note.classList.add('title');
+        note.classList.add('delete');
 
     }
-    noteList.appendChild(list);
+    noteList.appendChild(list).addEventListener('click', showSingleNote());
 
 
-})
-var singleNote = document.getElementById("single-note");
+    // add button
+
+    let btn = document.createElement('button');
+    btn.innerText = "Add note"
+    noteList.appendChild(btn);
+    // add class name in the buuton tag
+    btn.classList.add('btn-style');
+    btn.addEventListener
+
+}
+
 //console.log(singleNote);
-
-
-
-var textArea = document.getElementById("note-text").value
-
+showSingleNote();
 
 function showSingleNote(id) {
-    var titles = document.getElementById("input-title").value;
+    var singleNote1 = document.getElementById("singleNote");
+    singleNote1.style.display = "block";
+    for (let i = 0; i < notes.length; i++) {
+        id = notes[i].id;
+    }
+    //console.log(id);
 
+
+    var titles = document.getElementById("input-title").value;
+    //filling input
     for (var i = 0; i < titles.length; i++) {
         notes.title = titles[i].value;
         console.log(titles);
 
     }
+    //filling textarea
     var contents = document.getElementById("note-text").value;
 
     for (var i = 0; i < contents.length; i++) {
@@ -51,19 +67,11 @@ function showSingleNote(id) {
         console.log(contents);
 
     }
-    /* var newNote = document.getElementsByClassName("newNote");
- 
-     if (newNote.style.display == "none") {
-         newNote.style.display = "block";
-     }
-     else {
-         newNote.style.display = "none";
-     }*/
-
+}
+function showAll() {
+    var showBtn = document.getElementById("add-icon");
+    //console.log(showBtn);
+    showBtn.addEventListener('click', showNotesList());
 
 }
-showSingleNote();
-
-function openNewNote() {
-
-}
+showAll();
