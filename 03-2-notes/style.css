@@ -1,3 +1,48 @@
-#singleNote {
-    display: nne;
+* {
+    box-sizing: border-box;
+ }
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+  #note-list{
+      padding: 20px;
+      margin: 20px 10px;
+  }
+  
+  #singleNote {
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+  }
+  #input-title {
+    padding: 10px 45px 0;
+    border: 2px solid rgb(8, 153, 146);
+    margin-top: 40px;
+    margin-left: 40px;
+    text-align: center;
 }
+#note-text {
+    padding: 50px;
+    margin-top: 10px;
+    margin-left: 40px;
+    border: 2px solid rgb(8, 153, 146);
+
+}
+#save{
+    margin-left: 50px;
+
+}
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+.delete {
+    float: right;
+    background:rgb(33, 163, 157);
+    padding: 6px;
+    border-radius: 4px;
+}
+
