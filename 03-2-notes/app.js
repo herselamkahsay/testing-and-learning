@@ -6,6 +6,7 @@ const notes = [
 //console.log(notes[i].title);
 
 var noteList = document.getElementById("note-list");
+
 //console.log(noteList)
 //showNotesList();
 function showNotesList() {
@@ -21,12 +22,28 @@ function showNotesList() {
 
         // Add it to the list:
         list.appendChild(note);
+        //add delete button for each list
+        var deleteBtn = document.createElement('button');
+        deleteBtn.innerText = "delete"
+        list.appendChild(deleteBtn);
+
+        deleteBtn.addEventListener('click', event => list.removeChild(note));
+        //noteList.appendChild(deleteBtn);
+
         // Add class name
         note.classList.add('title');
-        note.classList.add('delete');
+        deleteBtn.classList.add('delete');
 
     }
-    noteList.appendChild(list).addEventListener('click', showSingleNote());
+    //noteList.appendChild(list);
+    noteList.appendChild(list);
+    noteList.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.target = showSingleNote();
+
+    });
+
+
 
 
     // add button
@@ -34,20 +51,26 @@ function showNotesList() {
     let btn = document.createElement('button');
     btn.innerText = "Add note"
     noteList.appendChild(btn);
-    // add class name in the buuton tag
-    btn.classList.add('btn-style');
-    btn.addEventListener
+    // add class name in the button tag
+    btn.type = "button";
+    btn.classList.add('btn', 'btn-success');
+    btn.addEventListener('click', function addNewNote() {
+
+    });
+
 
 }
+
 
 //console.log(singleNote);
 showSingleNote();
 
+
 function showSingleNote(id) {
     var singleNote1 = document.getElementById("singleNote");
-    singleNote1.style.display = "block";
+    singleNote1.style.display = "inline-block";
     for (let i = 0; i < notes.length; i++) {
-        id = notes[i].id;
+        id = notes[i];
     }
     //console.log(id);
 
@@ -71,7 +94,10 @@ function showSingleNote(id) {
 function showAll() {
     var showBtn = document.getElementById("add-icon");
     //console.log(showBtn);
-    showBtn.addEventListener('click', showNotesList());
+    showBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        showNotesList();
+    });
 
 }
 showAll();
